@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Zuazuart | Tattoo Artist Madrid</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+
+body {
+    margin: 0;
+    background-color: #0C0C0F;
+    color: #F2F2F2;
+    font-family: 'Inter', sans-serif;
+}
+
+h1, h2, h3 {
+    font-family: 'Cormorant Garamond', serif;
+    letter-spacing: 3px;
+}
+
+a {
+    color: #BFA15A;
+    text-decoration: none;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    border-bottom: 1px solid #BFA15A;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    margin: 8px;
+    font-size: 13px;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+.hero {
+    min-height: 75vh;
+    padding: 40px 20px;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)), url('REPLACE IMAGE') center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 52px;
+}
+
+.hero p {
+    color: #A9A9A9;
+    margin-bottom: 20px;
+}
+
+.btn {
+    border: 1px solid #BFA15A;
+    padding: 14px 28px;
+    margin: 8px;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 13px;
+}
+
+.section {
+    padding: 60px 8%;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.grid img {
+    width: 100%;
+    height: auto;
+}
+
+.booking, .contact {
+    background-color: #151519;
+    text-align: center;
+}
+
+.footer {
+    text-align: center;
+    padding: 30px;
+    font-size: 13px;
+    color: #A9A9A9;
+}
+
+/* TABLETS */
+@media(max-width: 1024px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero h1 {
+        font-size: 44px;
+    }
+}
+
+/* MOBILE */
+@media(max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        min-height: 65vh;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .btn {
+        width: 90%;
+        text-align: center;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <h2>ZUAZUART</h2>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Portfolio</a>
+        <a href="#">Booking</a>
+        <a href="#">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>Blackwork & Realism</h1>
+    <p>Madrid · By Appointment Only</p>
+
+    <div>
+        <a class="btn" href="#">Book Appointment</a>
+        <a class="btn" href="#">View Portfolio</a>
+    </div>
+</section>
+
+<section class="section">
+    <h2>Selected Work</h2>
+
+    <div class="grid">
+        <img src="REPLACE IMAGE">
+        <img src="REPLACE IMAGE">
+        <img src="REPLACE IMAGE">
+        <img src="REPLACE IMAGE">
+        <img src="REPLACE IMAGE">
+        <img src="REPLACE IMAGE">
+    </div>
+</section>
+
+<section class="section">
+    <h2>About</h2>
+    <p>
+    Zuazuart is a Madrid-based tattoo artist specializing in blackwork, black & grey realism, and color realism. 
+    Each project is custom designed with a focus on precision, contrast, and longevity.
+    </p>
+</section>
+
+<section class="section booking">
+    <h2>Booking Information</h2>
+
+    <p>6 hours — 250€<br>8–10 hours — 350€</p>
+
+    <p>Appointment only · Custom work only</p>
+
+    <a class="btn" href="#">Request Consultation</a>
+
+    <br><br>
+
+    <a class="btn" href="#">Download Release Form (EN)</a>
+    <a class="btn" href="#">Descargar Consentimiento (ES)</a>
+</section>
+
+<section class="section contact">
+    <h2>Contact</h2>
+
+    <p>Email: your@email.com</p>
+    <p>Instagram: @zuazuart</p>
+    <p>Madrid, Spain</p>
+
+</section>
+
+<div class="footer">
+    © Zuazuart — All rights reserved
+</div>
+
+</body>
+</html>
