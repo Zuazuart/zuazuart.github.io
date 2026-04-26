@@ -1,14 +1,241 @@
-<section class="portfolio-grid">
-    <h2 style="text-align: center; margin: 40px 0;">Mis Trabajos</h2>
-    <div class="grid-container">
-        <div class="work-item">
-            <img src="img/tatuaje1.jpg" alt="Realismo Blackwork">
-        </div>
-        <div class="work-item">
-            <img src="img/tatuaje2.jpg" alt="Tatuaje Realista">
-        </div>
-        <div class="work-item">
-            <img src="img/tatuaje3.jpg" alt="Blackwork Madrid">
-        </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Zuazuart Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+
+/* GLOBAL */
+
+body {
+    margin: 0;
+    background-color: #0C0C0F;
+    color: #F2F2F2;
+    font-family: 'Inter', sans-serif;
+}
+
+h1, h2 {
+    font-family: 'Cormorant Garamond', serif;
+    letter-spacing: 4px;
+    text-align: center;
+}
+
+p {
+    color: #A9A9A9;
+    text-align: center;
+}
+
+a {
+    color: #BFA15A;
+    text-decoration: none;
+}
+
+/* HEADER */
+
+header {
+    text-align: center;
+    padding: 25px;
+    border-bottom: 1px solid #BFA15A;
+}
+
+nav a {
+    margin: 10px;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+/* HERO */
+
+.hero {
+    min-height: 75vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('REPLACE IMAGE') center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* SECTIONS */
+
+.section {
+    padding: 70px 8%;
+}
+
+.section-title {
+    margin-bottom: 40px;
+}
+
+/* GRID */
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.grid img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* CTA */
+
+.cta {
+    background-color: #151519;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.btn {
+    border: 1px solid #BFA15A;
+    padding: 14px 30px;
+    margin-top: 20px;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* FOOTER */
+
+.footer {
+    text-align: center;
+    padding: 40px;
+    font-size: 13px;
+    color: #A9A9A9;
+}
+
+/* TABLET */
+
+@media(max-width:1024px){
+    .grid {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <h2>ZUAZUART</h2>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Portfolio</a>
+        <a href="#">Booking</a>
+        <a href="#">Contact</a>
+    </nav>
+</header>
+
+<!-- HERO IMPACT -->
+
+<section class="hero">
+    <h1>Selected Work</h1>
+    <p>Blackwork · Realism · Madrid</p>
+</section>
+
+<!-- OPENING IMPACT (FIRST IMPRESSION) -->
+
+<section class="section">
+    <div class="grid">
+        <img src="REPLACE IMAGE">
+        <img src="REPLACE IMAGE">
+        <img src="REPLACE IMAGE">
     </div>
 </section>
+
+<!-- BLACKWORK -->
+
+<section class="section">
+    <h2 class="section-title">Blackwork</h2>
+    <div class="grid">
+        <img src="REPLACE IMAGE">
+        <img src="REPLACE IMAGE">
+        <img src="REPLACE IMAGE">
+        <img src="REPLACE IMAGE">
+        <img src="REPLACE IMAGE">
+        <img src="REPLACE IMAGE">
+    </div>
+</section>
+
+<!-- BLACK & GREY REALISM -->
+
+<section class="section">
+    <h2 class="section-title">Black & Grey Realism</h2>
+    <div class="grid">
+        <img src="REPLACE IMAGE">
+        <img src="REPLACE IMAGE">
+        <img src="REPLACE IMAGE">
+        <img src="REPLACE IMAGE">
+        <img src="REPLACE IMAGE">
+        <img src="REPLACE IMAGE">
+    </div>
+</section>
+
+<!-- COLOR REALISM -->
+
+<section class="section">
+    <h2 class="section-title">Color Realism</h2>
+    <div class="grid">
+        <img src="REPLACE IMAGE">
+        <img src="REPLACE IMAGE">
+        <img src="REPLACE IMAGE">
+        <img src="REPLACE IMAGE">
+        <img src="REPLACE IMAGE">
+        <img src="REPLACE IMAGE">
+    </div>
+</section>
+
+<!-- LARGE SCALE -->
+
+<section class="section">
+    <h2 class="section-title">Large Scale Work</h2>
+    <div class="grid">
+        <img src="REPLACE IMAGE">
+        <img src="REPLACE IMAGE">
+        <img src="REPLACE IMAGE">
+        <img src="REPLACE IMAGE">
+    </div>
+</section>
+
+<!-- DETAIL CLOSE UPS -->
+
+<section class="section">
+    <h2 class="section-title">Details</h2>
+    <div class="grid">
+        <img src="REPLACE IMAGE">
+        <img src="REPLACE IMAGE">
+        <img src="REPLACE IMAGE">
+    </div>
+</section>
+
+<!-- CTA -->
+
+<section class="cta">
+    <h2>Start Your Project</h2>
+    <p>Appointment Only · Custom Work</p>
+    <a class="btn" href="#">Book Appointment</a>
+</section>
+
+<!-- FOOTER -->
+
+<div class="footer">
+    © Zuazuart · Madrid, Spain
+</div>
+
+</body>
+</html>
