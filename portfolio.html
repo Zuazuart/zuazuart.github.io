@@ -1,241 +1,133 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Zuazuart Portfolio</title>
-
-<link rel="icon" href="logopng.ico">
-
-<style>
-
-/* GLOBAL */
-
-body {
-    margin: 0;
-    background-color: #0C0C0F;
-    color: #F2F2F2;
-    font-family: 'Inter', sans-serif;
-}
-
-h1, h2 {
-    font-family: 'Cormorant Garamond', serif;
-    letter-spacing: 4px;
-    text-align: center;
-}
-
-p {
-    color: #A9A9A9;
-    text-align: center;
-}
-
-a {
-    color: #BFA15A;
-    text-decoration: none;
-}
-
-/* HEADER */
-
-header {
-    text-align: center;
-    padding: 25px;
-    border-bottom: 1px solid #BFA15A;
-}
-
-nav a {
-    margin: 10px;
-    font-size: 13px;
-    text-transform: uppercase;
-}
-
-/* HERO */
-
-.hero {
-    min-height: 75vh;
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('REPLACE IMAGE') center/cover no-repeat;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-/* SECTIONS */
-
-.section {
-    padding: 70px 8%;
-}
-
-.section-title {
-    margin-bottom: 40px;
-}
-
-/* GRID */
-
-.grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 18px;
-}
-
-.grid img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-/* CTA */
-
-.cta {
-    background-color: #151519;
-    text-align: center;
-    padding: 80px 20px;
-}
-
-.btn {
-    border: 1px solid #BFA15A;
-    padding: 14px 30px;
-    margin-top: 20px;
-    display: inline-block;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
-/* FOOTER */
-
-.footer {
-    text-align: center;
-    padding: 40px;
-    font-size: 13px;
-    color: #A9A9A9;
-}
-
-/* TABLET */
-
-@media(max-width:1024px){
-    .grid {
-        grid-template-columns: repeat(2,1fr);
-    }
-}
-
-/* MOBILE */
-
-@media(max-width:768px){
-    .grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Zuazuart</title>
+    <meta name="description" content="Explore Zuazuart's tattoo portfolio, including blackwork, black and grey realism, color realism, and process video.">
+    <link rel="icon" type="image/x-icon" href="logopng.ico">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <header class="site-header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">ZUAZUART</a>
+            <button class="hamburger" id="hamburger" type="button" aria-label="Open menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav id="nav-menu" aria-label="Main navigation">
+                <a href="index.html">Home</a>
+                <a href="portfolio.html" aria-current="page">Portfolio</a>
+                <a href="about.html">About</a>
+                <a href="booking.html">Booking</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
 
-<header>
-    <h2>ZUAZUART</h2>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="#">Portfolio</a>
-        <a href="#">Booking</a>
-        <a href="#">Contact</a>
-    </nav>
-</header>
+    <main>
+        <section class="hero hero--portfolio">
+            <div class="container hero-content">
+                <p class="eyebrow">Portfolio</p>
+                <h1>Selected tattoo work.</h1>
+                <p>Blackwork, black and grey realism, color realism, and custom compositions built with contrast and flow.</p>
+            </div>
+        </section>
 
-<!-- HERO IMPACT -->
+        <section class="reels-section section--muted">
+            <div class="container">
+                <div class="section-header">
+                    <p class="eyebrow">Process</p>
+                    <h2>Process Clips</h2>
+                    <p>Short session videos can be added here when they are compressed for the web or hosted on a video platform.</p>
+                    <div class="actions">
+                        <a href="https://www.instagram.com/zuazuart/" target="_blank" rel="noopener" class="btn">View Instagram</a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-<section class="hero">
-    <h1>Selected Work</h1>
-    <p>Blackwork · Realism · Madrid</p>
-</section>
+        <section>
+            <div class="container">
+                <div class="section-header">
+                    <p class="eyebrow">Selected work</p>
+                    <h2>Recent Pieces</h2>
+                </div>
+                <div class="gallery-grid">
+                    <img src="ladybugcolortattoowide.jpg" alt="Color realism ladybug tattoo">
+                    <img src="rosescolorbandg.jpg" alt="Black and grey roses tattoo">
+                    <img src="scorpiontattoo.jpg" alt="Black and grey scorpion tattoo">
+                    <img src="tigercolortattoo.jpg" alt="Color realism tiger tattoo">
+                    <img src="tigercolortattoo.jpg" alt="Color tattoo portrait by Zuazuart">
+                    <img src="soccerballbandg.jpg" alt="Blackwork soccer ball tattoo">
+                </div>
+            </div>
+        </section>
 
-<!-- OPENING IMPACT (FIRST IMPRESSION) -->
+        <section class="section--muted">
+            <div class="container">
+                <div class="work-category">
+                    <h3>Blackwork</h3>
+                    <p>Bold graphic pieces, fine details, and high-impact black ink.</p>
+                    <div class="gallery-grid">
+                        <img src="soccerballbandg.jpg" alt="Blackwork soccer ball tattoo">
+                        <img src="soccerballbandg.jpg" alt="Fine line blackwork shading tattoo">
+                        <img src="scorpiontattoo.jpg" alt="Scorpion tattoo by Zuazuart">
+                    </div>
+                </div>
 
-<section class="section">
-    <div class="grid">
-        <img src="REPLACE IMAGE">
-        <img src="REPLACE IMAGE">
-        <img src="REPLACE IMAGE">
-    </div>
-</section>
+                <div class="work-category">
+                    <h3>Black &amp; Grey Realism</h3>
+                    <p>Smooth gradients, realistic texture, and strong contrast.</p>
+                    <div class="gallery-grid">
+                        <img src="rosescolorbandg.jpg" alt="Black and grey roses tattoo">
+                        <img src="rosescolorbandgprocess.jpg" alt="Black and grey ship tattoo">
+                        <img src="scorpiontattoo.jpg" alt="Black and grey scorpion tattoo">
+                        <img src="rosescolorbandgprocess.jpg" alt="Black and grey tattoo process">
+                        <img src="soccerballbandg.jpg" alt="Black and grey shading detail">
+                        <img src="soccerballbandg.jpg" alt="Black and grey soccer ball tattoo">
+                    </div>
+                </div>
 
-<!-- BLACKWORK -->
+                <div class="work-category">
+                    <h3>Color Realism</h3>
+                    <p>Vibrant color work with clean edges and readable detail.</p>
+                    <div class="gallery-grid">
+                        <img src="Ladybugcolortattoo.jpg" alt="Color realism ladybug tattoo">
+                        <img src="ladybugcolortattoowide.jpg" alt="Wide color realism ladybug tattoo">
+                        <img src="tigercolortattoo.jpg" alt="Color realism tiger tattoo">
+                        <img src="colorrealismtattoo.png" alt="Color realism tattoo by Zuazuart">
+                        <img src="tigercolortattoo.jpg" alt="Color tattoo portrait">
+                        <img src="Ladybugcolortattoo.jpg" alt="Large color tattoo piece">
+                    </div>
+                </div>
+            </div>
+        </section>
 
-<section class="section">
-    <h2 class="section-title">Blackwork</h2>
-    <div class="grid">
-        <img src="REPLACE IMAGE">
-        <img src="REPLACE IMAGE">
-        <img src="REPLACE IMAGE">
-        <img src="REPLACE IMAGE">
-        <img src="REPLACE IMAGE">
-        <img src="REPLACE IMAGE">
-    </div>
-</section>
+        <section class="contact-info-section">
+            <div class="container narrow">
+                <p class="eyebrow">Your idea next</p>
+                <h2>Start a custom project.</h2>
+                <p>Send your concept, placement, approximate size, and reference images through the booking form.</p>
+                <div class="actions">
+                    <a href="booking.html" class="btn">Request Appointment</a>
+                    <a href="contact.html" class="btn btn--ghost">Ask a Question</a>
+                </div>
+            </div>
+        </section>
+    </main>
 
-<!-- BLACK & GREY REALISM -->
+    <footer class="site-footer">
+        <div class="container footer-container">
+            <p>&copy; <span data-year></span> Zuazuart. All rights reserved.</p>
+        </div>
+    </footer>
 
-<section class="section">
-    <h2 class="section-title">Black & Grey Realism</h2>
-    <div class="grid">
-        <img src="REPLACE IMAGE">
-        <img src="REPLACE IMAGE">
-        <img src="REPLACE IMAGE">
-        <img src="REPLACE IMAGE">
-        <img src="REPLACE IMAGE">
-        <img src="REPLACE IMAGE">
-    </div>
-</section>
-
-<!-- COLOR REALISM -->
-
-<section class="section">
-    <h2 class="section-title">Color Realism</h2>
-    <div class="grid">
-        <img src="REPLACE IMAGE">
-        <img src="REPLACE IMAGE">
-        <img src="REPLACE IMAGE">
-        <img src="REPLACE IMAGE">
-        <img src="REPLACE IMAGE">
-        <img src="REPLACE IMAGE">
-    </div>
-</section>
-
-<!-- LARGE SCALE -->
-
-<section class="section">
-    <h2 class="section-title">Large Scale Work</h2>
-    <div class="grid">
-        <img src="REPLACE IMAGE">
-        <img src="REPLACE IMAGE">
-        <img src="REPLACE IMAGE">
-        <img src="REPLACE IMAGE">
-    </div>
-</section>
-
-<!-- DETAIL CLOSE UPS -->
-
-<section class="section">
-    <h2 class="section-title">Details</h2>
-    <div class="grid">
-        <img src="REPLACE IMAGE">
-        <img src="REPLACE IMAGE">
-        <img src="REPLACE IMAGE">
-    </div>
-</section>
-
-<!-- CTA -->
-
-<section class="cta">
-    <h2>Start Your Project</h2>
-    <p>Appointment Only · Custom Work</p>
-    <a class="btn" href="#">Book Appointment</a>
-</section>
-
-<!-- FOOTER -->
-
-<div class="footer">
-    © Zuazuart · Madrid, Spain
-</div>
-
+    <script src="script.js"></script>
 </body>
+
 </html>

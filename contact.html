@@ -1,0 +1,161 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Zuazuart - Tattoo Artist Madrid</title>
+    <meta name="description" content="Contact Zuazuart for tattoo questions, consultations, and booking support in Madrid, Spain.">
+    <link rel="icon" type="image/x-icon" href="logopng.ico">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">ZUAZUART</a>
+            <button class="hamburger" id="hamburger" type="button" aria-label="Open menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav id="nav-menu" aria-label="Main navigation">
+                <a href="index.html">Home</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="about.html">About</a>
+                <a href="booking.html">Booking</a>
+                <a href="contact.html" aria-current="page">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero hero--contact">
+            <div class="container hero-content">
+                <p class="eyebrow">Contact</p>
+                <h1>Questions before booking?</h1>
+                <p>Use the booking form for tattoo projects. Use this page for general questions, studio details, or collaboration inquiries.</p>
+            </div>
+        </section>
+
+        <section class="section--muted">
+            <div class="container contact-cards-grid">
+                <article class="contact-card">
+                    <h3>Email</h3>
+                    <p>info.zuazuart@gmail.com</p>
+                    <small>Responses usually within 24 to 48 hours</small>
+                </article>
+                <article class="contact-card">
+                    <h3>Studio Location</h3>
+                    <p>Madrid, Spain</p>
+                    <small>Exact address provided after booking</small>
+                </article>
+                <article class="contact-card">
+                    <h3>Instagram</h3>
+                    <p>@zuazuart</p>
+                    <small>Use direct messages for quick questions</small>
+                </article>
+                <article class="contact-card">
+                    <h3>Hours</h3>
+                    <p>By appointment only</p>
+                    <small>Monday to Saturday, 10am to 7pm</small>
+                </article>
+            </div>
+        </section>
+
+        <section>
+            <div class="container contact-grid">
+                <div class="contact-form-container">
+                    <p class="eyebrow">Send a message</p>
+                    <h2>General Contact</h2>
+                    <p class="section-lead">For tattoo requests, the <a href="booking.html">booking page</a> is the best place to send project details and reference images.</p>
+
+                    <form class="contact-form" id="contactForm" action="https://formsubmit.co/info.zuazuart@gmail.com" method="POST">
+                        <input type="text" name="_honey" tabindex="-1" autocomplete="off" style="display:none">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_next" value="success.html">
+                        <input type="hidden" name="_subject" value="New Contact Form Submission from Zuazuart Website">
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Full Name</label>
+                                <input type="text" id="name" name="name" required placeholder="Your full name">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" required placeholder="your@email.com">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" placeholder="Optional">
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <select id="subject" name="subject" required>
+                                    <option value="">Select a subject</option>
+                                    <option value="General Inquiry">General Inquiry</option>
+                                    <option value="Tattoo Question">Tattoo Question</option>
+                                    <option value="Pricing">Pricing Information</option>
+                                    <option value="Collaboration">Collaboration</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="6" required placeholder="Tell me what you would like to ask."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-submit">Send Message</button>
+                    </form>
+                </div>
+
+                <aside class="studio-info-sidebar">
+                    <h3>Studio Information</h3>
+                    <div class="info-block">
+                        <h4>Location</h4>
+                        <p>Madrid, Spain. Full address is provided after consultation booking.</p>
+                    </div>
+                    <div class="info-block">
+                        <h4>Getting here</h4>
+                        <p>Public transport access and nearby parking options are shared with confirmed clients.</p>
+                    </div>
+                    <div class="info-block">
+                        <h4>Accessibility</h4>
+                        <p>Please mention accessibility needs in your message so the session can be prepared properly.</p>
+                    </div>
+                    <div class="info-block">
+                        <h4>Social</h4>
+                        <p><a href="https://www.instagram.com/zuazuart/" target="_blank" rel="noopener">Instagram @zuazuart</a></p>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <section class="section--muted contact-info-section">
+            <div class="container narrow">
+                <p class="eyebrow">Tattoo request</p>
+                <h2>Have the idea ready?</h2>
+                <p>Go straight to the booking form and include your placement, size, style, and reference images.</p>
+                <div class="actions">
+                    <a href="booking.html" class="btn">Request Appointment</a>
+                    <a href="https://www.instagram.com/zuazuart/" target="_blank" rel="noopener" class="btn btn--ghost">Instagram</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-container">
+            <p>&copy; <span data-year></span> Zuazuart. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

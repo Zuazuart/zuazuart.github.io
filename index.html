@@ -1,216 +1,156 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Zuazuart | Tattoo Artist</title>
-
-<link rel="icon" href="logopng.ico">
-
-<style>
-
-body {
-    margin: 0;
-    background-color: #0C0C0F;
-    color: #F2F2F2;
-    font-family: 'Inter', sans-serif;
-}
-
-h1, h2, h3 {
-    font-family: 'Cormorant Garamond', serif;
-    letter-spacing: 3px;
-}
-
-a {
-    color: #BFA15A;
-    text-decoration: none;
-}
-
-header {
-    text-align: center;
-    padding: 20px;
-    border-bottom: 1px solid #BFA15A;
-}
-
-nav {
-    margin-top: 10px;
-}
-
-nav a {
-    margin: 8px;
-    font-size: 13px;
-    text-transform: uppercase;
-    display: inline-block;
-}
-
-.hero {
-    min-height: 75vh;
-    padding: 40px 20px;
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)), url('REPLACE IMAGE') center/cover no-repeat;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.hero h1 {
-    font-size: 52px;
-}
-
-.hero p {
-    color: #A9A9A9;
-    margin-bottom: 20px;
-}
-
-.btn {
-    border: 1px solid #BFA15A;
-    padding: 14px 28px;
-    margin: 8px;
-    display: inline-block;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-size: 13px;
-}
-
-.section {
-    padding: 60px 8%;
-}
-
-.grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 18px;
-}
-
-.grid img {
-    width: 100%;
-    height: auto;
-}
-
-.booking, .contact {
-    background-color: #151519;
-    text-align: center;
-}
-
-.footer {
-    text-align: center;
-    padding: 30px;
-    font-size: 13px;
-    color: #A9A9A9;
-}
-
-/* TABLETS */
-@media(max-width: 1024px) {
-    .grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .hero h1 {
-        font-size: 44px;
-    }
-}
-
-/* MOBILE */
-@media(max-width: 768px) {
-    .grid {
-        grid-template-columns: 1fr;
-    }
-
-    .hero {
-        min-height: 65vh;
-    }
-
-    .hero h1 {
-        font-size: 34px;
-    }
-
-    .btn {
-        width: 90%;
-        text-align: center;
-    }
-
-    nav {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-}
-
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zuazuart | Blackwork & Realism Tattoo Artist</title>
+    <meta name="description" content="Zuazuart is a Madrid tattoo artist specializing in blackwork, black and grey realism, and color realism. Custom work by appointment only.">
+    <link rel="icon" type="image/x-icon" href="logopng.ico">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <header class="site-header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">ZUAZUART</a>
+            <button class="hamburger" id="hamburger" type="button" aria-label="Open menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav id="nav-menu" aria-label="Main navigation">
+                <a href="index.html" aria-current="page">Home</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="about.html">About</a>
+                <a href="booking.html">Booking</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
 
-<header>
-    <h2>ZUAZUART</h2>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="portfolio.html">portfolio</a>
-        <a href="booking.html">Booking</a>
-        <a href="contact.html">Contact</a>
-    </nav>
-</header>
+    <main>
+        <section class="hero hero--home">
+            <div class="container hero-content">
+                <p class="eyebrow">Custom tattoo artist in Madrid</p>
+                <h1>Blackwork &amp; Realism Tattoos</h1>
+                <p>High contrast custom tattoos shaped around your idea, your placement, and how the piece will live on skin.</p>
+                <div class="hero-actions">
+                    <a href="booking.html" class="btn">Book Appointment</a>
+                    <a href="portfolio.html" class="btn btn--ghost">View Portfolio</a>
+                </div>
+            </div>
+        </section>
 
-<section class="hero">
-    <h1>Blackwork & Realism</h1>
-    <p>Madrid · By Appointment Only</p>
+        <section>
+            <div class="container intro-grid">
+                <div class="intro-copy">
+                    <p class="eyebrow">Appointment only</p>
+                    <h2>Custom work with a clean, focused process.</h2>
+                    <p>Every tattoo starts with your idea, clear reference images, placement, and a design direction that fits your body. The goal is a piece that looks strong on day one and ages with intention.</p>
+                    <p>Zuazuart focuses on blackwork, black and grey realism, color realism, and larger custom compositions.</p>
+                    <div class="actions">
+                        <a href="about.html" class="btn btn--ghost">About the Artist</a>
+                    </div>
+                </div>
+                <div class="feature-image">
+                    <img src="rosescolorbandg.jpg" alt="Black and grey roses tattoo by Zuazuart">
+                </div>
+            </div>
+        </section>
 
-    <div>
-        <a class="btn" href="booking.html">Book Appointment</a>
-        <a class="btn" href="portfolio.html">View Portfolio</a>
-    </div>
-</section>
+        <section class="section--muted">
+            <div class="container">
+                <div class="section-header">
+                    <p class="eyebrow">Portfolio focus</p>
+                    <h2>Styles Available</h2>
+                    <p>Choose the direction that fits your idea, then send references through the booking form.</p>
+                </div>
 
-<section class="section">
-    <h2>Selected Work</h2>
+                <div class="work-category">
+                    <h3>Black &amp; Grey Realism</h3>
+                    <p>Smooth tonal transitions, high contrast, and depth for realistic subjects.</p>
+                    <div class="image-pair">
+                        <img src="rosescolorbandg.jpg" alt="Black and grey rose tattoo">
+                        <img src="rosescolorbandgprocess.jpg" alt="Black and grey ship tattoo">
+                    </div>
+                </div>
 
-    <div class="grid">
-        <img src="rosescolorbandgprocess.jpg">
-        <img src="rosescolorbandg.jpg">
-        <img src="scorpiontattoo.jpg">
-        <img src="soccerballbandg.jpg">
-        <img src="ladybugcolortattoowide.jpg">
-        <img src="Ladybugcolortattoo.jpg">
-    </div>
-</section>
+                <div class="work-category">
+                    <h3>Color Realism</h3>
+                    <p>Saturated color work built around clean contrast and readable detail.</p>
+                    <div class="image-pair">
+                        <img src="Ladybugcolortattoo.jpg" alt="Color realism ladybug tattoo">
+                        <img src="tigercolortattoo.jpg" alt="Color realism tiger tattoo">
+                    </div>
+                </div>
 
-<section class="section">
-    <h2>About</h2>
-    <p>
-    Zuazuart is a Madrid-based tattoo artist specializing in blackwork, black & grey realism, and color realism. 
-    Each project is custom designed with a focus on precision, contrast, and longevity.
-    </p>
-</section>
+                <div class="work-category">
+                    <h3>Blackwork</h3>
+                    <p>Bold black ink, ornamental details, and graphic compositions with impact.</p>
+                    <div class="image-pair">
+                        <img src="soccerballbandg.jpg" alt="Blackwork soccer ball tattoo">
+                        <img src="soccerballbandg.jpg" alt="Fine line blackwork shading tattoo">
+                    </div>
+                </div>
+            </div>
+        </section>
 
-<section class="section booking">
-    <h2>Booking Information</h2>
+        <section>
+            <div class="container">
+                <div class="section-header">
+                    <p class="eyebrow">How it works</p>
+                    <h2>Simple Booking Flow</h2>
+                </div>
+                <div class="process-grid">
+                    <article class="process-step">
+                        <span>1</span>
+                        <h3>Send your idea</h3>
+                        <p>Share the concept, placement, approximate size, and reference images.</p>
+                    </article>
+                    <article class="process-step">
+                        <span>2</span>
+                        <h3>Review</h3>
+                        <p>Your project is reviewed for style fit, timing, and design direction.</p>
+                    </article>
+                    <article class="process-step">
+                        <span>3</span>
+                        <h3>Confirm</h3>
+                        <p>Approved projects receive pricing guidance, date options, and deposit details.</p>
+                    </article>
+                    <article class="process-step">
+                        <span>4</span>
+                        <h3>Tattoo day</h3>
+                        <p>Arrive prepared, review the final placement, and begin the session.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
 
-    <p>6 hours — 250€<br>8–10 hours — 350€</p>
+        <section class="section--muted contact-info-section">
+            <div class="container narrow">
+                <p class="eyebrow">Start your project</p>
+                <h2>Ready when your idea is clear.</h2>
+                <p>Serious inquiries only. Limited monthly availability. Studio address is shared after booking confirmation.</p>
+                <div class="actions">
+                    <a href="booking.html" class="btn">Request Appointment</a>
+                    <a href="mailto:info.zuazuart@gmail.com" class="btn btn--ghost">Email</a>
+                </div>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/zuazuart/" target="_blank" rel="noopener">Instagram</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </div>
+        </section>
+    </main>
 
-    <p>Appointment only · Custom work only</p>
+    <footer class="site-footer">
+        <div class="container footer-container">
+            <p>&copy; <span data-year></span> Zuazuart. All rights reserved.</p>
+        </div>
+    </footer>
 
-    <a class="btn" href="#">Request Consultation</a>
-
-    <br><br>
-
-    <a class="btn" href="#">Download Release Form (EN)</a>
-    <a class="btn" href="#">Descargar Consentimiento (ES)</a>
-</section>
-
-<section class="section contact">
-    <h2>Contact</h2>
-
-    <p>Email: info.zuazuart@gmail.com</p>
-    <p>Instagram: @zuazuart</p>
-    <p>Madrid - Spain   /   Miami - Florida</p>
-
-</section>
-
-<div class="footer">
-    © Zuazuart — 2015 - 2025 All rights reserved
-</div>
-
+    <script src="script.js"></script>
 </body>
+
 </html>
