@@ -28,3 +28,13 @@ if(!form.action.startsWith('https://formspree.io/'))return;
 e.preventDefault();const btn=form.querySelector('[type="submit"]');const label=btn.textContent;btn.disabled=true;btn.textContent=es?'Enviando…':'Sending…';status.textContent='';status.classList.remove('is-error');
 try{const response=await fetch(form.action,{method:'POST',body:new FormData(form),headers:{Accept:'application/json'}});if(!response.ok)throw new Error('submit failed');location.assign(new URL('success.html',location.href).href);}catch(error){status.textContent=es?'No se ha podido confirmar el envío. Inténtalo de nuevo o escribe a info.zuazuart@gmail.com.':'Sending could not be confirmed. Please retry or email info.zuazuart@gmail.com.';status.classList.add('is-error');}finally{btn.disabled=false;btn.textContent=label;}
 });});
+
+const referenceFiles = document.querySelector('#booking-reference-files');
+const referenceSelection = document.querySelector('.file-selection');
+referenceFiles?.addEventListener('change', () => {
+  const files = Array.from(referenceFiles.files || []);
+  const maxSize = 10 * 1024 * 1024;
+  const invalid = files.length > 10 || files.reduce((total, file) => total + file.size, 0) > maxSize;
+  referenceFiles.setCustomValidity(invalid ? (document.documentElement.lang === 'es' ? 'Selecciona un máximo de 10 archivos con 10 MB en total.' : 'Select no more than 10 files, up to 10 MB in total.') : '');
+  if (referenceSelection) referenceSelection.textContent = files.length ? files.map(file => file.name).join(', ') : '';
+});
