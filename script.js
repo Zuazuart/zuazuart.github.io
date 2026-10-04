@@ -1,134 +1,30 @@
-const hamburger = document.getElementById("hamburger");
-const navMenu = document.getElementById("nav-menu");
 
-if (hamburger && navMenu) {
-    hamburger.addEventListener("click", () => {
-        const isOpen = navMenu.classList.toggle("active");
-        hamburger.classList.toggle("active", isOpen);
-        hamburger.setAttribute("aria-expanded", String(isOpen));
-    });
-
-    navMenu.querySelectorAll("a").forEach((link) => {
-        link.addEventListener("click", () => {
-            navMenu.classList.remove("active");
-            hamburger.classList.remove("active");
-            hamburger.setAttribute("aria-expanded", "false");
-        });
-    });
-}
-
-document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape") {
-        document.querySelector(".lightbox")?.remove();
-        document.body.classList.remove("no-scroll");
-        navMenu?.classList.remove("active");
-        hamburger?.classList.remove("active");
-        hamburger?.setAttribute("aria-expanded", "false");
-    }
+const es = document.documentElement.lang === 'es';
+const hamburger = document.getElementById('hamburger');
+const navMenu = document.getElementById('nav-menu');
+function closeMenu(){navMenu?.classList.remove('active');hamburger?.classList.remove('active');hamburger?.setAttribute('aria-expanded','false');}
+hamburger?.addEventListener('click',()=>{const open=navMenu.classList.toggle('active');hamburger.classList.toggle('active',open);hamburger.setAttribute('aria-expanded',String(open));});
+navMenu?.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeMenu));
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&navMenu?.classList.contains('active')){closeMenu();hamburger.focus();}});
+document.addEventListener('click',e=>{if(!e.target.closest('.site-header'))closeMenu();});
+document.querySelectorAll('[data-year]').forEach(n=>n.textContent=new Date().getFullYear());
+document.querySelectorAll('[data-filter]').forEach(button=>button.addEventListener('click',()=>{
+document.querySelectorAll('[data-filter]').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));
+document.querySelectorAll('[data-category]').forEach(group=>group.hidden=button.dataset.filter!=='all'&&group.dataset.category!==button.dataset.filter);
+document.getElementById('filter-status').textContent='Mostrando: '+button.textContent;
+}));
+document.querySelectorAll('.gallery-item, .gallery-grid > img, .image-pair > img, .feature-image > img').forEach(trigger=>{
+const img=trigger.tagName==='IMG'?trigger:trigger.querySelector('img');
+if(trigger.tagName==='IMG'){trigger.tabIndex=0;trigger.setAttribute('role','button');trigger.setAttribute('aria-label',(es?'Ampliar: ':'Expand: ')+img.alt);}
+function openImage(){const dialog=document.createElement('dialog');dialog.className='image-dialog';dialog.setAttribute('aria-label',img.alt);const big=document.createElement('img');big.src=img.src;big.alt=img.alt;const close=document.createElement('button');close.type='button';close.textContent=es?'Cerrar ×':'Close ×';dialog.append(close,big);document.body.append(dialog);document.body.classList.add('no-scroll');dialog.addEventListener('close',()=>{document.body.classList.remove('no-scroll');dialog.remove();trigger.focus();});close.addEventListener('click',()=>dialog.close());dialog.addEventListener('click',e=>{if(e.target===dialog){const r=dialog.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)dialog.close();}});dialog.showModal();close.focus();}
+trigger.addEventListener('click',openImage);if(trigger.tagName==='IMG')trigger.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openImage();}});
 });
-
-document.querySelectorAll(".gallery-grid img, .image-pair img, .feature-image img").forEach((img) => {
-    img.addEventListener("click", () => {
-        const overlay = document.createElement("div");
-        overlay.className = "lightbox";
-        overlay.setAttribute("role", "dialog");
-        overlay.setAttribute("aria-label", "Expanded tattoo image");
-
-        const bigImg = document.createElement("img");
-        bigImg.src = img.src;
-        bigImg.alt = img.alt;
-
-        const closeButton = document.createElement("button");
-        closeButton.type = "button";
-        closeButton.className = "lightbox-close";
-        closeButton.textContent = "Close";
-        closeButton.setAttribute("aria-label", "Close expanded image");
-
-        overlay.append(bigImg, closeButton);
-        document.body.appendChild(overlay);
-        document.body.classList.add("no-scroll");
-
-        const closeLightbox = () => {
-            overlay.remove();
-            document.body.classList.remove("no-scroll");
-        };
-
-        overlay.addEventListener("click", (event) => {
-            if (event.target === overlay || event.target === closeButton) {
-                closeLightbox();
-            }
-        });
-    });
-});
-
-document.querySelectorAll(".video-card").forEach((card) => {
-    const video = card.querySelector(".reel-video");
-    const playButton = card.querySelector(".play-pause-btn");
-    const muteButton = card.querySelector(".mute-btn");
-    const duration = card.querySelector(".video-duration");
-
-    if (!video || !playButton || !muteButton || !duration) return;
-
-    const formatTime = (seconds) => {
-        if (!Number.isFinite(seconds)) return "0:00";
-        const minutes = Math.floor(seconds / 60);
-        const remainingSeconds = Math.floor(seconds % 60);
-        return `${minutes}:${String(remainingSeconds).padStart(2, "0")}`;
-    };
-
-    const updateDuration = () => {
-        duration.textContent = `${formatTime(video.currentTime)} / ${formatTime(video.duration)}`;
-    };
-
-    const pauseOtherVideos = () => {
-        document.querySelectorAll(".reel-video").forEach((otherVideo) => {
-            if (otherVideo !== video && !otherVideo.paused) {
-                otherVideo.pause();
-                const otherCard = otherVideo.closest(".video-card");
-                const otherButton = otherCard?.querySelector(".play-pause-btn");
-                if (otherButton) otherButton.textContent = "Play";
-            }
-        });
-    };
-
-    const togglePlay = () => {
-        if (video.paused) {
-            pauseOtherVideos();
-            video.play();
-            playButton.textContent = "Pause";
-        } else {
-            video.pause();
-            playButton.textContent = "Play";
-        }
-    };
-
-    playButton.addEventListener("click", togglePlay);
-    video.addEventListener("click", togglePlay);
-    video.addEventListener("loadedmetadata", updateDuration);
-    video.addEventListener("timeupdate", updateDuration);
-    video.addEventListener("ended", () => {
-        playButton.textContent = "Play";
-        updateDuration();
-    });
-
-    muteButton.addEventListener("click", () => {
-        video.muted = !video.muted;
-        muteButton.textContent = video.muted ? "Muted" : "Sound";
-    });
-});
-
-document.querySelectorAll("[data-year]").forEach((node) => {
-    node.textContent = new Date().getFullYear();
-});
-
-document.querySelectorAll("form").forEach((form) => {
-    form.addEventListener("submit", () => {
-        const submitButton = form.querySelector('button[type="submit"]');
-        if (!submitButton) return;
-
-        submitButton.dataset.originalText = submitButton.textContent;
-        submitButton.textContent = "Sending...";
-        submitButton.disabled = true;
-        submitButton.classList.add("is-loading");
-    });
-});
+// Formspree supports JSON submissions. Redirect only after confirmed acceptance.
+document.querySelectorAll('form').forEach(form=>{
+let status=form.querySelector('.form-status');if(!status){status=document.createElement('p');status.className='form-status';status.setAttribute('role','status');form.append(status);}
+form.addEventListener('submit',async e=>{
+if(location.hostname==='localhost'||location.hostname==='127.0.0.1'){e.preventDefault();status.textContent=es?'Vista previa: no se ha enviado la consulta.':'Preview: no inquiry was sent.';return;}
+if(!form.action.startsWith('https://formspree.io/'))return;
+e.preventDefault();const btn=form.querySelector('[type="submit"]');const label=btn.textContent;btn.disabled=true;btn.textContent=es?'Enviando…':'Sending…';status.textContent='';status.classList.remove('is-error');
+try{const response=await fetch(form.action,{method:'POST',body:new FormData(form),headers:{Accept:'application/json'}});if(!response.ok)throw new Error('submit failed');location.assign(new URL('success.html',location.href).href);}catch(error){status.textContent=es?'No se ha podido confirmar el envío. Inténtalo de nuevo o escribe a info.zuazuart@gmail.com.':'Sending could not be confirmed. Please retry or email info.zuazuart@gmail.com.';status.classList.add('is-error');}finally{btn.disabled=false;btn.textContent=label;}
+});});
