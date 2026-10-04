@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Tattoo Appointment Madrid | Zuazuart</title>
+    <meta name="description" content="Request a tattoo appointment with Zuazuart in Madrid. Send your idea, placement, size, and references.">
+    <link rel="icon" type="image/x-icon" href="../logopng.ico">
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">ZUAZUART</a>
+            <button class="hamburger" id="hamburger" type="button" aria-label="Open menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav id="nav-menu" aria-label="Main navigation">
+                <a href="index.html">Home</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="about.html">About</a>
+                <a href="booking.html" aria-current="page">Booking</a>
+                <a href="contact.html">Contact</a>
+            <a href="../booking.html" lang="es" aria-label="Ver en español">ES</a></nav>
+        </div>
+    </header>
+
+    <a class="skip-link" href="#main">Skip to content</a><main id="main" tabindex="-1">
+        <section class="hero hero--booking">
+            <div class="container hero-content">
+                <p class="eyebrow">Booking request</p>
+                <h1>Start your tattoo project.</h1>
+                <p>Custom projects only. Send enough detail to understand the piece, placement, size, and direction.</p>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <div class="section-header">
+                    <p class="eyebrow">Before you submit</p>
+                    <h2>Booking Process</h2>
+                    <p>Clear details help your request move faster and make the quote more accurate.</p>
+                </div>
+                <div class="process-grid">
+                    <article class="process-step">
+                        <span>1</span>
+                        <h3>Describe the idea</h3>
+                        <p>Include subject, style, placement, size, and any important meaning.</p>
+                    </article>
+                    <article class="process-step">
+                        <span>2</span>
+                        <h3>Add links</h3>
+                        <p>Reference links are optional. You can send more details after your initial inquiry.</p>
+                    </article>
+                    <article class="process-step">
+                        <span>3</span>
+                        <h3>Review</h3>
+                        <p>Your request is reviewed for fit, timing, and project direction.</p>
+                    </article>
+                    <article class="process-step">
+                        <span>4</span>
+                        <h3>Confirm date</h3>
+                        <p>Approved projects receive availability, price guidance, and deposit details.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section--muted">
+            <div class="container booking-grid">
+                <div class="booking-copy">
+                    <p class="eyebrow">Session rates</p>
+                    <h2>Pricing Guide</h2>
+                    <div class="policy-grid">
+                        <article class="policy-item">
+                            <h3>Half Session</h3>
+                            <p>6 hours: <strong>250&euro;</strong></p>
+                        </article>
+                        <article class="policy-item">
+                            <h3>Full Session</h3>
+                            <p>8 to 10 hours: <strong>350&euro;</strong></p>
+                        </article>
+                    </div>
+                    <p class="section-lead">Final pricing depends on size, placement, detail, and number of sessions needed.</p>
+                </div>
+
+                <aside class="booking-info-sidebar">
+                    <h3>Helpful Details</h3>
+                    <div class="info-block">
+                        <h4>Best references</h4>
+                        <p>Clear photos, mood images, and examples of style direction are useful. Upload them to Google Drive, iCloud, Dropbox, or similar, then paste the share link.</p>
+                    </div>
+                    <div class="info-block">
+                        <h4>Deposit</h4>
+                        <p>A non-refundable deposit is required to secure confirmed dates.</p>
+                    </div>
+                    <div class="info-block">
+                        <h4>Studio</h4>
+                        <p>Madrid, Spain. Exact address is shared after confirmation.</p>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <section>
+            <div class="container narrow">
+                <div class="section-header">
+                    <p class="eyebrow">Project inquiry</p>
+                    <h2>Request Appointment</h2>
+                </div>
+
+                <form class="booking-form" action="https://formspree.io/f/xpqbgkbe" method="POST">
+                    <input type="hidden" name="_next" value="https://www.zuazuart.com/en/success.html">
+                    <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="display:none">
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="booking-name">Full Name</label>
+                            <input id="booking-name" type="text" name="name" autocomplete="name" placeholder="Your full name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="booking-email">Email Address</label>
+                            <input id="booking-email" type="email" name="email" autocomplete="email" placeholder="your@email.com" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="booking-phone">Phone Number</label>
+                            <input id="booking-phone" type="tel" name="phone" autocomplete="tel" placeholder="Optional">
+                        </div>
+                        <div class="form-group">
+                            <label for="booking-placement">Placement / Body Area</label>
+                            <input id="booking-placement" type="text" name="placement" placeholder="Arm, leg, back, chest...">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="booking-size">Approximate Size</label>
+                            <input id="booking-size" type="text" name="size" placeholder="Example: 10 cm, half sleeve, palm size">
+                        </div>
+                        <div class="form-group">
+                            <label for="booking-style">Preferred Style</label>
+                            <select id="booking-style" name="style">
+                                <option value="">Select a style</option>
+                                <option value="Blackwork">Blackwork</option>
+                                <option value="Black and Grey Realism">Black &amp; Grey Realism</option>
+                                <option value="Color Realism">Color Realism</option>
+                                <option value="Large Scale Project">Large Scale Project</option>
+                                <option value="Not Sure Yet">Not Sure Yet</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="booking-project">Project Description</label>
+                        <textarea id="booking-project" name="project" placeholder="Describe your idea, the story, important details, and any timing needs." required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="booking-reference-links">Reference Image Links</label>
+                        <textarea id="booking-reference-links" name="reference_links" placeholder="Paste links to Google Drive, iCloud, Dropbox, Pinterest, Instagram, or other reference images."></textarea>
+                        <p class="field-note">Make sure shared links are set so they can be viewed.</p>
+                    </div>
+
+                    
+
+                    <button type="submit" class="btn btn-submit">Submit Inquiry</button>
+                    <p class="form-note">Approved inquiries receive consultation, pricing guidance, and deposit instructions.</p>
+                </form>
+            </div>
+        </section>
+
+        <section class="section--muted">
+            <div class="container">
+                <div class="section-header">
+                    <p class="eyebrow">Studio documents</p>
+                    <h2>Release Forms</h2>
+                    <p>Download the form, sign it, then paste a share link in the booking request or email the signed document after submitting.</p>
+                </div>
+                <div class="actions">
+                    <a href="../forms/release-form-en.pdf" class="btn" download>Download English Form</a>
+                    <a href="../forms/release-form-es.pdf" class="btn btn--ghost" download>Download Spanish Form</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-container">
+            <p>&copy; <span data-year></span> Zuazuart. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+
+</html>
